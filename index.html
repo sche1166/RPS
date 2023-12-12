@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        #container {
+            display: flex;
+            flex-direction: column;
+        }
+    #computer_user{
+        display: flex;
+        justify-content: space-between;
+    }
+    #computer{
+        display: flex;
+        flex-direction: column;
+    }
+    #user{
+        display:flex;
+        flex-direction: column;
+    }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            height: 40px
+        }
+    </style>
+</head>
+<div>
+    <div id="container">
+        <h1> ROCK PAPER SCISSORS</h1>
+        <p id="round-results">First to 5 Wins: </p>
+
+        <div id="computer_user">
+            <div id="computer">
+                <h3>Computer Choice: <span id="computer-choice"></span></h3>
+                <p id="Cscore"> Score: </p>
+            </div>
+            <div id="user"></div>
+            <h3>User Choice: <span id="user-choice"></span></h3>
+            <p id="Uscore"> Score: </p>
+        </div>
+
+
+        <div>Results: <span id="results"></span>
+
+
+
+            <div class="buttons">
+                <img src="rock.png" alt="rock" class="btn" id="Rock">
+                <img src="paper.png" alt="rock" class="btn" id="Paper">
+                <img src="scissors.png" alt="rock" class="btn" id="Scissors">
+
+            </div>
+
+            <button id="newGameButton"> PLAY AGAIN?</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="RPS.js"></script>
+    </body>
+
+</html>
