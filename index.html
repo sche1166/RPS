@@ -1,68 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     
-        #container {
-            display: flex;
-            flex-direction: column;
-        }
-    #computer_user{
-        display: flex;
-        justify-content: space-between;
-    }
-    #computer{
-        display: flex;
-        flex-direction: column;
-    }
-    #user{
-        display:flex;
-        flex-direction: column;
-    }
-        .buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        .btn {
-            height: 40px
-        }
+body{
+    background-color: rgb(139, 135, 130);
+}
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#computer_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#computer,
+#user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sDisplay {
+   align-items: center;
+   font-size: 30px; /* Adjust the font size as needed */
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center; /* Center the buttons vertically */
+}
+#rock,#paper,#scissors {
+    height: 60px;
+}
+
+h3 img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: opacity 1.5s ease-in;
+    
+}
+#round-results {
+    font-size: 50px;
+    color: rgb(130, 25, 29);
+}
+  
+
+#Results {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
     </style>
 </head>
-<div>
+
     <div id="container">
-        <h1> ROCK PAPER SCISSORS</h1>
-        <p id="round-results">First to 5 Wins: </p>
+        <div id="Results"> </div>
+        <p id="round-results"> </p>
 
         <div id="computer_user">
             <div id="computer">
-                <h3>Computer Choice: <span id="computer-choice"></span></h3>
-                <p id="Cscore"> Score: </p>
+               <div class="sDisplay">Computer: <span id="Cscore"></span></div> 
+                <h3 id="computer-choice"></span><br></h3>
             </div>
-            <div id="user"></div>
-            <h3>User Choice: <span id="user-choice"></span></h3>
-            <p id="Uscore"> Score: </p>
-        </div>
-
-
-        <div>Results: <span id="results"></span>
-
-
-
-            <div class="buttons">
-                <img src="rock.png" alt="rock" class="btn" id="Rock">
-                <img src="paper.png" alt="rock" class="btn" id="Paper">
-                <img src="scissors.png" alt="rock" class="btn" id="Scissors">
-
+            
+            <div id="user">
+                <div class="sDisplay">User: <span id="Uscore"></span></div> 
+                <h3 id="user-choice">  <br> </h3>
             </div>
-
-            <button id="newGameButton"> PLAY AGAIN?</button>
         </div>
-    </div>
+        <div class="buttons">
+            <img src="Photos/rock.png" alt="rock" class="btn" onclick="userO(event)" id="Rock">
+            <img src="Photos/paper.png" alt="rock" class="btn" onclick="userO(event)" id="Paper">
+            <img src="Photos/scissors.png" alt="rock" class="btn" onclick="userO(event)" id="Scissors">
+
+        </div>
+        <div id ="tracker"></div>
+        <button id="newGameButton"> PLAY AGAIN?</button>
+
+    
 
 
 
@@ -70,4 +100,4 @@
     <script src="RPS.js"></script>
     </body>
 
-</html>
+    </html>
